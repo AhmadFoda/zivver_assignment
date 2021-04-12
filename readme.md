@@ -54,11 +54,11 @@ cons
 2 - hard to read code comparing to recursion
 
 
-##Imagine that you have to process a large unsorted CSV file in Java/Scala/Clojure or Kotlin
+## Imagine that you have to process a large unsorted CSV file in Java/Scala/Clojure or Kotlin
 with two columns: productId (Int) and availableIn (ISO2 String, e.g. &quot;US&quot;, &quot;NL&quot;). The goal
 is to group the file sorted by productId together with a list where the product is available.
 
-####Answer
+#### Answer
 
 it throws out of memory exception because probably the code was trying to put the while file in memory at once,
 I have made some research and did some code attempts first one was breaking the large file into chunks and process
@@ -69,10 +69,10 @@ on the target file.
 
 How MappedByteBuffer works :
 
-######Memory-mapped I/O uses the filesystem to establish a virtual memory mapping from user space directly to the applicable filesystem pages.
+###### Memory-mapped I/O uses the filesystem to establish a virtual memory mapping from user space directly to the applicable filesystem pages.
 With a memory-mapped file, we can pretend that the entire file is in memory and that we can access it by simply treating
 it as a very large array. This approach greatly simplifies the code we write in order to modify the file.
-#######To Do
+####### To Do
 
 1 - unit testing
 2 - performance/stress testing specially on (OutOfMemory Exception)
