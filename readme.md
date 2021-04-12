@@ -29,6 +29,7 @@ class BST[V] (implicit ord:Ordering[V]) {
 }
 ```
 
+please checkout implementation com/bst
 ### Would this class structure be different if you would have implemented them in a non-functional language like Java, Python, Go or C? In what sense?
 
 the structure itself will not vary much however the implementation of the algorithms itself will be very different. For example some languages like haskell will enforce and ensure immutability it won't let you change values, all the elements must be copied to be changed. but on the other hand with Java you can actually change the values it is not immutable by nature and this will result a big difference between both.
