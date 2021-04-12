@@ -2,7 +2,7 @@ package com.bst
 
 class BST[V] (implicit ord:Ordering[V]) {
 
-private sealed trait gTree[V]
+private sealed trait Tree[V]
 
 private case object Leaf extends Tree[V]
 
@@ -36,11 +36,5 @@ private def find(t:Tree[V], value: V): Option[V] = t match {
     else if(ord.lt(value,v)) find(l,value)
     else find(r,value)
 }
-
-/*
-Would this class structure be different if you would have implemented them in a non-functional language like Java,
-Python, Go or C? In what sense?
-I don't think its going to be much different in another implementation
- */
 
 }

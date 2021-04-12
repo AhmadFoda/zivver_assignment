@@ -11,6 +11,6 @@ public class UpdateLegendaryItemImpl implements UpdateItemService {
 
     @Override
     public void updateSellInValue(Item item) {
-     //   item.sellIn -=1 ;
+     //   do nothing
     }
 }
