@@ -1,6 +1,16 @@
 # Zivver Assignment
-## How would you implement a binary search tree (BST) in Scala? Give the trait, (case) class and/or subclass definitions that you would write, without the functions for manipulating the tree: just the data model.
 
+## [OPTIONAL] Have a look at https://github.com/emilybache/GildedRose-Refactoring-Kata.
+How would you address a programming problem like this? Could you give an adequate
+solution in a language of choice?
+### Answer
+First thing I wrote unit testing and then I thought that I could break the problem with Template Method 
+Design Pattern. every kind of drinks/items has its own implementation and its own way of updating the quality 
+Then I used a factory pattern to decide which implementation should be used in the run-time. the only problem 
+with this design it that if we want to change the calculations we have to change the implementation of 
+calculation itself. plz find the solution at com/gildedrose.
+
+## How would you implement a binary search tree (BST) in Scala? Give the trait, (case) class and/or subclass definitions that you would write, without the functions for manipulating the tree: just the data model.
 
 
 
@@ -72,13 +82,41 @@ How MappedByteBuffer works :
 ###### Memory-mapped I/O uses the filesystem to establish a virtual memory mapping from user space directly to the applicable filesystem pages.
 With a memory-mapped file, we can pretend that the entire file is in memory and that we can access it by simply treating
 it as a very large array. This approach greatly simplifies the code we write in order to modify the file.
-####### To Do
+#### To Do
 
 1 - unit testing
+
 2 - performance/stress testing specially on (OutOfMemory Exception)
+
 3 - we can also break the file in chunks with this approach as well depending on the file size,
+
 I used approx 700 MB file and I think this approach is good up to 2 GB file, it really depends on the
 desk space as well.
+
+
+## Name both a good and a bad use case for using MongoDB (or some other document/objectstore).
+
+As per CAP theory it depends on what is critical for my design consistency, availability and partition tolerance.
+
+Bad Case :
+
+Lets say we are building a phone directory app or something that we know it will not have big data, and it probably it will fit 
+into single machine with no need to scale later on, and we don't know how to use noSql, and we want to learn it, so we decided to build that application with mongodb.
+Good Case :
+
+Lets say we are building a big digital platform, and we are supporting millions of people 
+who want to find a product and complete checkout process. with this number of users and this number  of
+QPS NoSQL would outperform SQl hanks to their distributed architecture,
+deliver the sub-millisecond responsiveness and elastic scalability that digital communication applications require.
+
+## You are  about to start your new job at a cool Amsterdam startup. What do you favor the most?
+Pick one 1 .
+a. Choose your own hardware, be forced to work with a company supplied operating
+system image.
+b. You are offered a standard piece of mediocre hardware. Free to pick your own
+software.
+
+I Have been in both places, I will go with (A) choose my own hardware 
 
 ## When a user logs in on our API, a JWT token is issued and our webapp uses this token for every request for authentication. Here's an example of such a token:
 
