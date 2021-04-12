@@ -2,7 +2,7 @@ package com.bst
 
 class BST[V] (implicit ord:Ordering[V]) {
 
-private sealed trait Tree[V]
+private sealed trait gTree[V]
 
 private case object Leaf extends Tree[V]
 
