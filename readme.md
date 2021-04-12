@@ -43,13 +43,19 @@ its easier to read code and there is no task nor calculations needed after the r
 #### Recursion
 
 pros
+
 1 -  More clear and reduces time needed for debugging
+
 2 -  Smaller code size
+
 3 -  Can reduced time complexity if implemented right using the heap not the stack
+
 4 -  Better for tree traversal
 
 cons
+
 1 - it could be very slow if not implemented right
+
 2 - it could also consume a lot of memory if it used the stack
 
 #### Iteration
@@ -102,6 +108,7 @@ Bad Case :
 
 Lets say we are building a phone directory app or something that we know it will not have big data, and it probably it will fit 
 into single machine with no need to scale later on, and we don't know how to use noSql, and we want to learn it, so we decided to build that application with mongodb.
+
 Good Case :
 
 Lets say we are building a big digital platform, and we are supporting millions of people 
@@ -143,9 +150,6 @@ it contains user roles information which is might be not safe in some cases.
 
   1 - add roles to JWT and use blacklist
   we add the roles to JWT and and we make a blacklist which contains the changed roles tokens, and for every request we validate the token against this list
+  
   2 - JWT without roles
   We don't add roles to JWT and we fetch them on demand from the database but this also comes with a price of querying on the database each time
-
-
-   ## License
-[MIT](https://choosealicense.com/licenses/mit/)
